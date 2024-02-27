@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - catalogUpdater
+  - --region=europe-west1
+  - --source=.
+  - --trigger-topic=update-catalog
+  - --memory=512
+  - --runtime=nodejs20
